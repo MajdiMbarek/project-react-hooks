@@ -1,0 +1,72 @@
+.AddMovie {
+    max-width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  h6 {
+      text-align: center;
+      font-size: large;
+    
+  }
+  h6:hover{
+      color: #8E806A;
+  }
+  .form{
+      display:grid;
+justify-content: center;
+      font-size: x-large;
+      margin-right:auto;
+     margin-left:auto;
+      padding-top: 50px;
+  }
+  .form-control{
+      display: flex;
+     justify-content:center;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 30px;
+      font-size: 30px;
+      
+      border-radius: 7px;
+  }
+  .row{
+      display: inline-block;
+      
+      justify-content: center;
+      text-align: center;
+      margin-top: 20px;
+     
+  }
+  .input-group{
+      display:inline-block;
+      text-align: center;
+      margin-top: 20px;
+     
+  }
+  #count{
+      display: flex;
+justify-content: center;      
+  }
+     
+  .btn{
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top:30px;
+      font-size: large;
+     background-color: black;
+     color: white;
+     font-weight: bold;
+     border-radius: 5px;
+  }
+  .btn:hover{
+      background-color: #8E806A;
+  }
+  .row:hover{
+      color:#8E806A;
+    }
+  .input-group:hover{
+      color:#8E806A;
+  }
