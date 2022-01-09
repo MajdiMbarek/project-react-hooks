@@ -3,6 +3,8 @@ import AddMovie from "../AddMovie/AddMovie.js";
 import "./App.css";
 import MovieList from '../MovieList/MovieList.js';
 import Filtring from '../Filtring/Filtring.js';
+import Description from '../Description/Description.js';
+import { Routes, Route } from "react-router-dom";
 
 const info = [
     { title: 'Chernobyl', img: '/image/Chernobyl.jpg', description: "The events recount the circumstances of the explosion of the Chernobyl nuclear reactor in April 1986 in the Soviet Socialist Union, which became one of the worst human disasters in the twentieth century.", posterURL: "www.chernobyl.com", rating: 9.4 },
@@ -37,21 +39,21 @@ function App() {
     function filter(key, rate) {
         setKeyword(key);
         setRate(rate);
-        console.log(rate + "  " + key);
         setFiltredList(list.filter((element) => { return ((element.title.toLowerCase().includes(key.toLowerCase())) && (element.rating >= rate)) }));
     }
 
     useEffect(() => { filter(keyword, rate); }, [list]);
 
 
-
     return (
         <div className="App">
-            <Filtring filter={filter} />
-            <MovieList list={filtredList} />
-            <AddMovie adding={adding} />
+            <Routes>
+
+                <Route path="/" element={<> <Filtring filter={filter} />  <MovieList list={filtredList} /> <AddMovie adding={adding} />   </>} />
+
+                <Route path="/:id" element={<Description list={list} />} />
+            </Routes>
         </div>
     );
 }
-
 export default App;
